@@ -9,8 +9,8 @@ import javax.websocket.server.PathParam;
 @Controller
 public class oneController {
 
-    @GetMapping("/one")
-    public String one(@PathParam("name") String name , Model model){
-        return "ONE";
+    @GetMapping("/")
+    public String one(Model model){
+        return "index";
     }
 }
