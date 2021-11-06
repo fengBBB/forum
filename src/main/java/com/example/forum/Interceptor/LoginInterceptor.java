@@ -17,7 +17,7 @@ public class LoginInterceptor implements HandlerInterceptor {
         HttpSession session= request.getSession();
         user user = (com.example.forum.bean.user) session.getAttribute("user");
         if(user==null){
-            return false;
+            throw new RuntimeException();
         }
         return true;
     }
